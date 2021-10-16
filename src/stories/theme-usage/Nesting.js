@@ -21,9 +21,15 @@ const innerTheme = createTheme({
 const Nesting = () => {
   return (
     <ThemeProvider theme={outerTheme}>
-      <Checkbox defaultChecked />
-      <ThemeProvider theme={innerTheme}>
+      <div>
         <Checkbox defaultChecked />
+        (primary = orange)
+      </div>
+      <ThemeProvider theme={innerTheme}>
+        <div>
+          <Checkbox defaultChecked />
+          (primary = green)
+        </div>
       </ThemeProvider>
     </ThemeProvider>
   );
